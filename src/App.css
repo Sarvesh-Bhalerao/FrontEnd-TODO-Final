@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: navy;
+  font-family: "Roboto", "sans-serif";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todoApp {
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  margin: 128px auto;
+  padding-bottom: 32px;
+}
+
+h1 {
+  margin: 32px 0;
+  color: tomato;
+  font-size: 28px;
+}
+
+.row.complete {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.6;
+}
+
+.do-form {
+  margin-bottom: 32px;
+}
+
+.task-input {
+  padding: 14px 32px 14px 16px;
+  margin-right: 4px;
+  border-radius: 4px;
+  border: 2px solid black;
+  color: black;
+  font-size: 20px;
+}
+
+.todobtn {
+  padding: 14px;
+  border: 2px solid black;
+  cursor: pointer;
+  outline: none;
+  color: tomato;
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: transparent;
+  border-radius: 4px;
+  transform: translateY(-3px);
+}
+
+.todobtn:active {
+  outline: none;
+  transform: scale(0.98);
+}
+
+.task-input:focus {
+  outline: none;
+}
+
+.task-input.edit {
+  border: 2px solid black;
+}
+.todobtn.edit {
+  background-color: black;
+  padding: 14px 22px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 4px auto;
   color: white;
+  background-color: navy;
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
 }
 
-.App-link {
-  color: #61dafb;
+.icns {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.edit-icon {
+  color: #fff;
 }
